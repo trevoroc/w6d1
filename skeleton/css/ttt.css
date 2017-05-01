@@ -17,3 +17,15 @@ li {
 li:hover {
   background-color: yellowgreen;
 }
+
+.clicked {
+  background-color: white;
+}
+
+.x {
+  color: maroon;
+}
+
+.o {
+  color: navy;
+}

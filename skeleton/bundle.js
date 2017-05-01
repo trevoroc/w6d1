@@ -103,14 +103,30 @@ class View {
     });
   }
 
+  removeEvents() {
+    this.$el.off("click", "li");
+  }
+
   getPos($square) {
     return posSeqs[$square.data("index")];
   }
 
   makeMove($square) {
     const mark = this.game.currentPlayer;
-    this.game.playMove(this.getPos($square));
-    $square.text(mark);
+
+    try {
+      this.game.playMove(this.getPos($square));
+      $square.text(mark);
+      $square.addClass("clicked");
+      $square.addClass(mark);
+    } catch (e) {
+      alert(e.msg);
+    }
+
+    if (this.game.isOver()) {
+      this.game.winner() ? alert(`${this.game.winner()}`) : alert("Cat's game");
+      this.removeEvents();
+    }
   }
 
   setupBoard() {
