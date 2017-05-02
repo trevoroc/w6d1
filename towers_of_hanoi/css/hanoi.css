@@ -1,0 +1,55 @@
+html, body, figure, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+h1  {
+  margin-left: 25%;
+}
+
+body {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+ul {
+  float: left;
+  width: 200px;
+  min-height: 120px;
+  margin: 0px 10px;
+  list-style: none;
+  border-bottom: 5px solid black;
+  vertical-align: bottom;
+}
+
+ul:hover {
+  background-color: lightpink;
+}
+
+
+li {
+  background-color: gray;
+  margin: 10px auto;
+  width: 150px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.small {
+  width: 50px;
+}
+
+.medium {
+  width: 100px;
+}
+
+.large {
+
+}
+
+.clicked {
+  border-bottom: 20px solid darkred;
+}
